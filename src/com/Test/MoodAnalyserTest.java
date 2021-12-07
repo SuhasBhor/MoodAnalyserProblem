@@ -8,9 +8,15 @@ import com.moodAnalyser.MoodAnalyser;
 
 public class MoodAnalyserTest {
 	@Test
-	public void testMessage() {
+	public void sadMessage() {
 		MoodAnalyser moodAnalyser = new MoodAnalyser();
 		String mood = moodAnalyser.analyseMood("I'm In Sad Mood");
 		assertEquals("Sad", mood);
+	}
+	@Test
+	public void happyMessage() {
+		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		String mood = moodAnalyser.analyseMood("I'm In Any Mood");
+		assertEquals("Happy", mood);
 	}
 }
