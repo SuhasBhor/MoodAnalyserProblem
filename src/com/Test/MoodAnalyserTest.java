@@ -28,4 +28,11 @@ public class MoodAnalyserTest {
 		String mood = moodAnalyser.analyseMood();
 		assertEquals("Happy", mood);
 	}
+	
+	@Test
+	public void emptyMessage() throws Exception{
+		MoodAnalyser moodAnalyser = new MoodAnalyser("");
+		String mood = moodAnalyser.analyseMood();
+		assertEquals("Happy", mood);
+	}
 }
