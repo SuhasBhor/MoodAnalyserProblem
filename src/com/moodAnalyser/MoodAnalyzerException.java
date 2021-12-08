@@ -1,13 +1,16 @@
 package com.moodAnalyser;
 
 public class MoodAnalyzerException extends Exception{
-	/*public MoodAnalyzerException() {
-		
-	}*/
-	public MoodAnalyzerException(String message) {
-		super(message);
+	public ExceptionType type;
+	public String message;
+	
+	
+	public enum ExceptionType{
+		NULL,EMPTYSTRING
 	}
-	/*public MoodAnalyzerException(String message , Throwable e) {
-		super(message,e);
-	}*/
+	public MoodAnalyzerException(String message,ExceptionType type) {
+		super(message);
+		this.type = type;
+	}
+	
 }
